@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #1f2937;
+  background: #f8fafc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.siteHeader {
+  background: #4f6774;
+}
+
+.navbar,
+.page {
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+
+.navList {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  text-decoration: underline;
+}
+
+.page {
+  padding-block: 2rem;
+}
+
+/* ตกแต่งหัวข้อและเนื้อหาให้ดูเป็นระเบียบ */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #282828;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e8e9eb;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #282828;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ตกแต่งรายการ (ul) และการ์ดวิชาให้ดูเด่นขึ้น */
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+/* ตกแต่งโครงสร้างหน้าและกริด */
+.page {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ตกแต่งการ์ด (BandCard / CourseCard) */
+.courseCard {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f3f4f6;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.courseCard:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ตกแต่งการ์ดวงดนตรี (BandCard) ให้ดูเด่นขึ้น */
+.bandCard {
+  background-color: #ffffff;
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  border: 1px solid #f3f4f6; /* border-gray-100 */
+  padding: 1.5rem; /* p-6 */
+  transition: all 0.3s ease;
+}
+
+.bandCard:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* hover:shadow-xl */
+}
+
+.about-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+  margin-bottom: 2rem;
+}
+
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.about-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 9999px;
+  background-color: #3b82f6;
+  flex-shrink: 0;
+}
